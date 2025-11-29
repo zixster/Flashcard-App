@@ -1,0 +1,7 @@
+{
+  "name": "MemriseClone AI",
+  "description": "A powerful spaced-repetition flashcard app with AI capabilities for mnemonics, article vocabulary extraction, and gamified learning modes.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

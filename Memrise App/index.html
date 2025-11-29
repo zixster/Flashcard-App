@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemriseClone AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <script>
+      // Polyfill process to prevent crash on process.env access
+      window.process = {
+        env: {
+          NODE_ENV: 'development',
+          // API_KEY will be injected by the environment or remain undefined
+        }
+      };
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'mem-yellow': '#FFC800',
+              'mem-blue': '#2B3648',
+              'mem-dark-blue': '#1B2432',
+              'mem-green': '#88CC14',
+              'mem-red': '#FF4B4B',
+              'mem-gray': '#F2F2F2'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F3F4F6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.0?deps=react@18.2.0,react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.330.0?deps=react@18.2.0",
+    "@google/genai": "https://esm.sh/@google/genai@0.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Load index.tsx as a module -->
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
